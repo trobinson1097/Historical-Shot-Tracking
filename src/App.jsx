@@ -2,9 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Players from './Players'
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [visible, setVisible] = useState(false)
+
+const handleToggle = () => {
+  setVisible(!visible)
+}
 
   return (
     <>
@@ -14,12 +23,38 @@ function App() {
         </a>
       </div>
       <h1>Historical Shot Tracking Data</h1>
+      
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={handleToggle}>
+          1986
         </button>
+        {visible && <Players />}
+        <button >
+          1987
+        </button>
+        <button>
+          1988
+        </button>
+        <button>
+          1989
+        </button ><button>
+          1990
+        </button><button>
+          1991
+        </button><button>
+          1992
+        </button><button>
+          1993
+        </button><button>
+          1994
+        </button><button>
+          1995
+        </button><button>
+          1996
+        </button>
+        
         <p>
-          
+
         </p>
       </div>
     </>
